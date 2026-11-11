@@ -125,10 +125,12 @@ func _read_arguments() -> void:
 				quit_after = int(args[i + 1])
 
 ## Turns a path Craft Anything gave us into an absolute one we can write to.
+## A path that starts with "app/" is relative to the folder above the project,
+## anything else is relative to the project itself.
 func _out_path(path: String) -> String:
 	if path.is_absolute_path():
 		return path
-	var project := ProjectSettings.globalize_path("res://")
+	var project := ProjectSettings.globalize_path("res://").trim_suffix("/")
 	var root := project.get_base_dir()
 	if path.begins_with("app/"):
 		return root.path_join(path)

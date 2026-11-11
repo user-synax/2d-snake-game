@@ -1,10 +1,9 @@
-extends Node
-class_name SnakeGame
+extends RefCounted
 
-## Classic Snake rules and board state.
+## Rules and board state for classic Snake.
 ##
-## The grid is COLS x ROWS cells. The snake is a list of Vector2i cells,
-## body[0] is the head. Movement is one cell per tick.
+## The board is COLS x ROWS cells. The snake is a list of Vector2i cells where
+## body[0] is the head and the last one is the tail. It moves one cell per tick.
 
 const COLS := 20
 const ROWS := 20
@@ -33,7 +32,7 @@ var food_eaten := 0
 var alive := true
 var rng := RandomNumberGenerator.new()
 
-func _ready() -> void:
+func _init() -> void:
 	rng.randomize()
 
 func reset() -> void:
@@ -53,7 +52,7 @@ func step_hz() -> float:
 	var steps := int(food_eaten / FOOD_PER_SPEED_STEP)
 	return minf(START_STEP_HZ + steps * SPEED_PER_5_FOOD, MAX_STEP_HZ)
 
-## Ask to turn. Opposite directions are refused (you cannot reverse into yourself).
+## Ask to turn. Reversing straight back is refused: that would be suicide.
 func turn(new_direction: Vector2i) -> void:
 	if new_direction == Vector2i.ZERO:
 		return
@@ -61,7 +60,7 @@ func turn(new_direction: Vector2i) -> void:
 		return
 	pending_direction = new_direction
 
-## Advance the snake one cell. Returns true when the snake is still alive.
+## Advance the snake one cell. Returns true while the snake is alive.
 func step() -> bool:
 	if pending_direction != Vector2i.ZERO:
 		direction = pending_direction
@@ -73,7 +72,6 @@ func step() -> bool:
 		return false
 
 	# The tail cell is free when the snake is not growing.
-	var tail := body[body.size() - 1]
 	var growing := head == food
 	for i in range(body.size() - (0 if growing else 1)):
 		if body[i] == head:

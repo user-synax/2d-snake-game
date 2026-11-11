@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "A simple snake game",
+  "request": "A simple snake game",
+  "target": {
+    "kind": "none"
+  },
+  "stack": "Godot",
+  "status": "building",
+  "note": "Building the first version…",
+  "created_ms": 1794372466541,
+  "updated_ms": 1794372616972,
+  "checks": [],
+  "agent_session": null,
+  "agent_session_by": "opencode",
+  "allowed_actions": [],
+  "last_reply": "",
+  "asset_budget_usd": 5.0,
+  "generate_assets": false,
+  "builder": "OpenCode",
+  "questions": "ask"
+}

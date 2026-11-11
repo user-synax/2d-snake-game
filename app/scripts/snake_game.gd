@@ -10,8 +10,8 @@ const ROWS := 20
 const CELL := 20
 
 ## Ticks per second at the start of a game, and the fastest it ever gets.
-const START_STEP_HZ := 8.0
-const MAX_STEP_HZ := 20.0
+const START_STEP_HZ := 6.0
+const MAX_STEP_HZ := 16.0
 ## Speed gained (in steps per second) for every 5 food eaten.
 const SPEED_PER_5_FOOD := 1.0
 ## Food needed for the next speed step.

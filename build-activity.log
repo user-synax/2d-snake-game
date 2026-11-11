@@ -62,3 +62,11 @@
 04:55:36 done  shell: FullName -------- C:\Users\Ayush\AppData\Local\Temp\opencode\godottest\sce
 04:55:47 start shell
 04:55:47 done  shell: === A: user args after -- === Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org Godot_v4.4.1-stable_win64_console.exe : ERROR: res://scenes/main.tscn:1 - Parse Error: Expecte
+04:57:55 said  BOM issue from PowerShell — good catch for my real files. Let me redo the probe with no BOM.
+04:57:55 start shell
+04:57:55 done  shell: === A: user args after -- === Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org USERARGS=["--screenshot", "C:\\Users\\Ayush\\AppData\\Local\\Temp\\opencode\\godottest\\a.png"
+04:58:12 said  Key finding: in headless mode `frame_post_draw` never fires (hang). Let me find exactly how Craft Anything invokes the game with `--screenshot`.
+04:58:12 start shell
+04:58:12 done  shell: format=1 app=0.5.0 renderer=dx12 ---config--- version = 3 mode = "beginner" deep_mode = true theme = "studio" language = "" first_run_done = true ask_before_running = true auto_mode = true runtime_
+04:58:12 start shell
+04:58:12 done  shell: FullName -------- C:\Users\Ayush\AppData\Local\ArtCraft C:\

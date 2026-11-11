@@ -1,0 +1,14 @@
+{
+  "id": "unk_ae877753c3cdfc53",
+  "revision": 1,
+  "question": "Which Snake variant does the person mean (arcade 1976, Nokia Snake, browser clone) and what are its exact numbers?",
+  "severity": "medium",
+  "domain": "mechanics",
+  "status": "open",
+  "probes": [
+    "Look for a reference image or video in reference/ or capture/ (both empty - capture/README.md says 'No target')",
+    "Ask the person to pick a look (core_person_ask)"
+  ],
+  "evidence_for": [],
+  "evidence_against": []
+}

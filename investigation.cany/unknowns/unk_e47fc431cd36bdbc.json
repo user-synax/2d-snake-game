@@ -1,0 +1,16 @@
+{
+  "id": "unk_e47fc431cd36bdbc",
+  "revision": 1,
+  "question": "How does Craft Anything launch the Godot project for --screenshot/--self-test (arg style, headless vs windowed, rendering driver)?",
+  "severity": "high",
+  "domain": "build",
+  "status": "open",
+  "probes": [
+    "Run Godot with args after '--' and see what OS.get_cmdline_user_args() returns",
+    "Run Godot with a direct unknown arg and see what OS.get_cmdline_args() returns and whether Godot rejects it",
+    "Run Godot --headless and try to capture the viewport image (fails - no rendering device)",
+    "Run Godot with --rendering-driver opengl3 (Vulkan fails on this GPU)"
+  ],
+  "evidence_for": [],
+  "evidence_against": []
+}

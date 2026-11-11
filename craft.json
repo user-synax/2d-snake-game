@@ -18,5 +18,5 @@
   "asset_budget_usd": 5.0,
   "generate_assets": false,
   "builder": "OpenCode",
-  "questions": "ask"
+  "questions": "decide"
 }

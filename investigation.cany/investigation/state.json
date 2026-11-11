@@ -1,8 +1,8 @@
 {
-  "revision": 2,
+  "revision": 3,
   "brief": {
     "question": "Build a simple snake game in Godot 4.4.1 (GDScript) in app/ that plays like the classic Snake: grid movement, arrow-key steering, food, growth, speed-up, wall/self collision, score.",
-    "purpose": "The person asked for 'a simple snake game'. No target program was supplied, so the reference is the classic Snake arcade/Nokia tradition.",
+    "purpose": "The person asked for 'a simple snake game'. No target program was supplied (capture/README.md: 'No target - Build from the request alone.'), so the reference is the classic Snake arcade/Nokia lineage.",
     "targets": [
       "D:\\Snake Game (workspace)",
       "app/ (new Godot project)"
@@ -51,5 +51,5 @@
   "hypotheses": [],
   "findings": [],
   "handoff": null,
-  "updated": "2026-11-11T04:54:13Z"
+  "updated": "2026-11-11T05:11:16Z"
 }
